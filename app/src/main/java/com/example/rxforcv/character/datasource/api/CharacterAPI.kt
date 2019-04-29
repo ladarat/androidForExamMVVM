@@ -1,4 +1,4 @@
-package com.example.rxforcv.api
+package com.example.rxforcv.character.api
 
 import io.reactivex.Observable
 import retrofit2.http.GET

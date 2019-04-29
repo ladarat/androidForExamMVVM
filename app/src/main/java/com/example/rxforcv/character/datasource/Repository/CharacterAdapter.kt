@@ -1,6 +1,6 @@
-package com.example.rxforcv.Repository
+package com.example.rxforcv.character.datasource.api.Repository
 
-import com.example.rxforcv.api.CharacterResponse
+import com.example.rxforcv.character.api.CharacterResponse
 import io.reactivex.Observable
 
 interface CharacterAdapter {

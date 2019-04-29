@@ -1,4 +1,4 @@
-package com.example.rxforcv.usecase
+package com.example.rxforcv.core
 
 import io.reactivex.Observable
 

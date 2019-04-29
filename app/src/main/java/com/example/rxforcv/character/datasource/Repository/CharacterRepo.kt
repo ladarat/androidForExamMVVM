@@ -1,9 +1,9 @@
-package com.example.rxforcv.Repository
+package com.example.rxforcv.character.datasource.api.Repository
 
-import com.example.rxforcv.api.CharacterResponse
-import com.example.rxforcv.api.CharacterAPI
-import com.example.rxforcv.network.OkHttpClientFactory
-import com.example.rxforcv.network.Retrofitfactory
+import com.example.rxforcv.character.api.CharacterResponse
+import com.example.rxforcv.character.api.CharacterAPI
+import com.example.rxforcv.core.network.OkHttpClientFactory
+import com.example.rxforcv.core.network.Retrofitfactory
 import io.reactivex.Observable
 
 class CharacterRepo: CharacterAdapter {

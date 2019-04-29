@@ -1,4 +1,4 @@
-package com.example.rxforcv.api
+package com.example.rxforcv.character.datasource.api.domain.usecase.model
 
 data class Result(
     val created: String,

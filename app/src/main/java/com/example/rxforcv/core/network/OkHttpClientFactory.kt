@@ -1,4 +1,4 @@
-package com.example.rxforcv.network
+package com.example.rxforcv.core.network
 
 import com.example.rxforcv.BuildConfig
 import okhttp3.OkHttpClient
