@@ -1,4 +1,4 @@
-package com.example.rxforcv
+package com.example.rxforcv.network
 
 import com.google.gson.GsonBuilder
 import io.reactivex.schedulers.Schedulers
