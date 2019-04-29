@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface CharacterAPI {
 
-    @GET("/charater")
+    @GET("/character")
     fun getCharacter(): Observable<CharacterResponse>
 }
