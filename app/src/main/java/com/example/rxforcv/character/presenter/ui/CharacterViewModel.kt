@@ -20,6 +20,10 @@ class CharacterViewModel(private val characterUsecase: Usecase<Unit, CharacterRe
     val characterResponse: LiveData<CharacterResponse>
         get() = _characterResponse
 
+    private var _errorEvent = MutableLiveData<Event<Throwable>>()
+    val errorEvent: LiveData<Event<Throwable>>
+        get() = _errorEvent
+
 
     fun requestCharacterList() {
         characterUsecase.execute(Unit)
@@ -32,7 +36,9 @@ class CharacterViewModel(private val characterUsecase: Usecase<Unit, CharacterRe
                     response.value = it
 
                 },
-                onError = {},
+                onError = {
+                    _errorEvent.value = Event(it)
+                },
                 onComplete = {}
             )
             .addTo(compositeDisposable)
