@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         viewModel = viewModelProvider(characterListViewModelFactory)
 
         binding.viewModel = viewModel
-        binding.viewModel?.notifyChange()
+        binding.setLifecycleOwner { lifecycle }
+
         callCharacterButton.setOnClickListener { viewModel.requestCharacterList() }
     }
 }

@@ -12,7 +12,7 @@ import io.reactivex.rxkotlin.addTo
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 
-class CharacterViewModel(private val characterUsecase: Usecase<Unit, CharacterResponse>) : BaseViewModel() {
+class CharacterViewModel(private val characterUsecase: Usecase<Unit, CharacterResponse>) : ViewModel() {
     val compositeDisposable = CompositeDisposable()
     var response = MutableLiveData<CharacterResponse>()
 
