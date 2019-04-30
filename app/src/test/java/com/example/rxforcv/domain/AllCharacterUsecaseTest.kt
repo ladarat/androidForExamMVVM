@@ -12,6 +12,7 @@ import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
+import java.lang.Error
 
 class AllCharacterUsecaseTest {
 
@@ -28,14 +29,23 @@ class AllCharacterUsecaseTest {
 
     @Test
     fun executeAllCharacteSuccess() {
-        var characterResponse = CharacterResponse().apply { results = listOf() }
-        whenever(characterRepo.getCharacterAll()).thenReturn(Observable.just(characterResponse))
+        whenever(characterRepo.getCharacterAll()).thenReturn(Observable.just(CharacterResponse()))
 
         val observable = allCharacterUsecase.execute(Unit).test()
 
 
-        observable.assertValue(CharacterResponse())
         verify(characterRepo).getCharacterAll()
+        observable.assertValue(CharacterResponse())
 
+    }
+
+    @Test
+    fun executeAllCharacterFail(){
+        whenever(characterRepo.getCharacterAll()).thenReturn(Observable.error(::Error))
+
+        val observable = allCharacterUsecase.execute(Unit).test()
+
+        verify(characterRepo).getCharacterAll()
+        observable.assertError(Error::class.java)
     }
 }
