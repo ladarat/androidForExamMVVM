@@ -1,13 +1,8 @@
 package com.example.rxforcv
 
-import android.arch.lifecycle.Lifecycle
-import android.arch.lifecycle.Observer
 import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.example.rxforcv.character.api.CharacterResponse
-import com.example.rxforcv.character.datasource.api.Repository.CharacterAdapter
+import android.support.v7.app.AppCompatActivity
 import com.example.rxforcv.character.datasource.api.Repository.CharacterRepo
 import com.example.rxforcv.character.datasource.api.domain.usecase.AllCharacterUsecase
 import com.example.rxforcv.character.presenter.ui.CharacterListViewModelFactory
