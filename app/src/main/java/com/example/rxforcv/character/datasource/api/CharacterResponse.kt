@@ -5,6 +5,6 @@ import com.example.rxforcv.character.datasource.api.domain.usecase.model.Result
 
 data class CharacterResponse(
     var info: Info = Info(),
-    val results: List<Result> = listOf()
+    var results: List<Result> = listOf()
 )
 
