@@ -4,7 +4,7 @@ import com.example.rxforcv.character.datasource.api.domain.usecase.model.Info
 import com.example.rxforcv.character.datasource.api.domain.usecase.model.Result
 
 data class CharacterResponse(
-    val info: Info,
-    val results: List<Result>
+    var info: Info = Info(),
+    val results: List<Result> = listOf()
 )
 
